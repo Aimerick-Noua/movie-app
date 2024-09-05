@@ -41,15 +41,14 @@ function MovieDetailsPage() {
                             {/* <img src={`${imageBaseUrl}${item.backdrop_path}`} alt="" className="bg-gradient-to-t w-full h-[70%]" /> */}
                         </div>
                         <div className="absolute top-8 bottom-8  text-neutral-50   bg-gradient-to-t from-black to-transparent">
-
                             <div className="h-[1/2]">
-
                                 <img src={`${imageBaseUrl}${item.poster_path}`} alt="" className="bg-gradient-to-t h-[300px] w-[300px]" />
                             </div>
                             <div className="h-[1/2]">
                                 <p>{item.description}</p>
                                 <p>{item.title}</p>
                                 <p>{item.release_date}</p>
+                                <p>{item.vote_average}</p>
                             </div>
 
                         </div>
