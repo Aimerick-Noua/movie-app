@@ -50,6 +50,7 @@ function MovieDetailsPage() {
                                 <p>{item.description}</p>
                                 <p>{item.title}</p>
                                 <p>{item.release_date}</p>
+                                <p>{item.vote_average}</p>
                             </div>
 
                         </div>
