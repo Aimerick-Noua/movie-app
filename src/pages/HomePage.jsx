@@ -41,6 +41,7 @@ function HomePage() {
             <div className="grid grid-cols-5 gap-5 px-12 pt-4" >
               {movieList?.map((movie) => (
                 <Card
+                id={movie.id}
                   key={movie.id}
                   title={movie.title}
                   vote_average={movie.vote_average}
