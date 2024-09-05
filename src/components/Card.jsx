@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 
+import Spinner from "./Spinner";
+
 function Card({ title, release_date, vote_average, imageUrl, name }) {
 
   const formattedRating = Number(vote_average).toPrecision(2);
@@ -16,11 +18,11 @@ function Card({ title, release_date, vote_average, imageUrl, name }) {
   const movie_title = truncateString(title, 20);
   return (
     <div className="relative  shadow-lg rounded-lg overflow-hidden mb-4">
-      <img
+   {imageUrl?    <img
         src={imageUrl}
         className="w-full h-[350px] object-cover"
         alt={title}
-      />
+      />:<Spinner/>}
       <div className=" bottom-0 left-0 right-0  flex flex-col justify-end pt-2">
         <h1 className="font-title text-xl text-white mb-1 bold">{name? name : movie_title}</h1>
 

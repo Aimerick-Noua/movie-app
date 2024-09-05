@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import getMoviesList from "../utilities/moviesApiComponent";
 import Card from "../components/Card";
- 
+import Spinner from "../components/Spinner";
+
 function HomePage() {
   const [movieList, setMovieList] = useState([]);
 
@@ -19,15 +20,16 @@ function HomePage() {
   }, []);
 
   return (
-    <>
-      <div className="pt-8 h-full bg-dark-gradient text-white  rounded-lg shadow-lg" style={{width:"100%"}}>
-        <div className="" style={{width:"100%"}}>
-        <div className="h-[40vh] relative bottom-8  text-neutral-50   bg-gradient-to-t from-black to-transparent">
 
+    <>
+      <div className="pt-8 h-full bg-dark-gradient text-white  rounded-lg shadow-lg" style={{ width: "100%" }}>
+        {movieList?.length > 0 ? 
+        <div className="" style={{ width: "100%" }}>
+          <div className="h-[40vh] relative bottom-8  text-neutral-50   bg-gradient-to-t from-black to-transparent">
                     <img src={randomMovieBackgroundImage} alt="" className="bg-gradient-to-t from-black to-transparent"/>
           </div>
         
-        <div className="p-8 absolute top-[700px] left-0 right-0">
+          <div className="p-8 absolute top-[700px] left-0 right-0">
           <section >
             <div className="flex gap-2 items-center pb-6">
             <hr />
@@ -49,10 +51,10 @@ function HomePage() {
             </div>
           </section>
         </div>
-        </div>
-        </div>
-        {/* <MainLayout/> */}
-     </>
+          </div> :<Spinner/>
+          }
+      </div>
+    </>
   );
 }
 export default HomePage;

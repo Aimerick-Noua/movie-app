@@ -13,7 +13,7 @@ export const Search = () => {
       indexName="index"
     >
       <Configure hitsPerPage={5} />
-      <div className="ais-InstantSearch">
+      <div className="ais-InstantSearch text-slate-900">
         <SearchBox />
         <Hits hitComponent={Hit} />
       </div>
