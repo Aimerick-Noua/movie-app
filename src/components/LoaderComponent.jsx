@@ -2,6 +2,7 @@
 
 import MovieLoader from './MovieLoader';
 import useGetLoadingState from '../hooks/useGetLoadingState';
+import Spinner from './Spinner';
 
 const LoaderComponent = ({children}) => {
   const loading = useGetLoadingState();
@@ -11,7 +12,7 @@ const LoaderComponent = ({children}) => {
 
   return (
     <div className="App">
-      {loading ? <MovieLoader /> : <div>{children}</div>}
+      {/* {loading ? <Spinner/>: <div>{children}</div>} */}
     </div>
   );
 };
