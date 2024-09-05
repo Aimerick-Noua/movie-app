@@ -11,6 +11,7 @@ import SearchPage from "./pages/SearchPage";
 import HomePage from "./pages/HomePage";
 import HeaderLayout from "./Layouts/HeaderLayout";
 import TvShowPage from "./pages/TvShowPage";
+import MovieDetailsPage from "./pages/MovieDetailsPage";
 function App() {
   const location = useLocation();
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/tvshow" element={<TvShowPage />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/home/movie/:id" element={<MovieDetailsPage/>}/>
         </Routes>
       </CSSTransition>
     </TransitionGroup>

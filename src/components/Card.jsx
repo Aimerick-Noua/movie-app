@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
 
-function Card({ title, release_date, vote_average, imageUrl, name }) {
+function Card({ title, release_date, vote_average, imageUrl, name,id }) {
 
   const formattedRating = Number(vote_average).toPrecision(2);
 
@@ -17,7 +18,8 @@ function Card({ title, release_date, vote_average, imageUrl, name }) {
   const movie_date = formatDate(release_date);
   const movie_title = truncateString(title, 20);
   return (
-    <div className="relative  shadow-lg rounded-lg overflow-hidden mb-4">
+    <div className="relative cursor-pointer  shadow-lg rounded-lg overflow-hidden mb-4">
+    <Link to={`/home/movie/${id}`}>
    {imageUrl?    <img
         src={imageUrl}
         className="w-full h-[350px] object-cover"
@@ -34,6 +36,8 @@ function Card({ title, release_date, vote_average, imageUrl, name }) {
           </div>
         </div>
       </div>
+
+      </Link>
     </div>
   );
 }
