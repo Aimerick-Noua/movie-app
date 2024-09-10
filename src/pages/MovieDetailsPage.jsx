@@ -39,9 +39,8 @@ function MovieDetailsPage() {
                     <div>
                         <div style={{ backgroundImage: `url('${imageBaseUrl}${item.backdrop_path}')`, height: "80vh", width: "100%", backgroundSize: "cover" }}>
                             {/* <img src={`${imageBaseUrl}${item.backdrop_path}`} alt="" className="bg-gradient-to-t w-full h-[70%]" /> */}
-                        </div>
-                        <div className="absolute top-8 bottom-8  text-neutral-50   bg-gradient-to-t from-black to-transparent">
-                            <div className="h-[1/2]">
+                        <div className=" text-neutral-50  w-[auto]  bg-gradient-to-t from-black to-transparent">
+                            <div className="h-[80vh]">
                                 <img src={`${imageBaseUrl}${item.poster_path}`} alt="" className="bg-gradient-to-t h-[300px] w-[300px]" />
                             </div>
                             <div className="h-[1/2]">
@@ -51,6 +50,7 @@ function MovieDetailsPage() {
                                 <p>{item.vote_average}</p>
                             </div>
 
+                        </div>
                         </div>
                     </div> : <Spinner />}
 
